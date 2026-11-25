@@ -1,0 +1,92 @@
+/* Hub page parts. Shared parts live in shell/shell.css. Colors only from tokens. */
+
+.hub-intro {
+  margin-bottom: var(--space-8);
+}
+
+.demo-list {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.demo-card > * {
+  margin: 0;
+}
+
+.demo-card > * + * {
+  margin-top: var(--space-3);
+}
+
+.demo-card .headline {
+  font-size: clamp(26px, 4.5vw, 32px);
+}
+
+.demo-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag-live {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.demo-card .eyebrow {
+  margin-top: var(--space-5);
+}
+
+.proof-list {
+  padding-inline-start: var(--space-5);
+}
+
+.proof-list li + li {
+  margin-top: var(--space-1);
+}
+
+.stack {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink-muted);
+}
+
+.stack li + li::before {
+  content: "·";
+  margin-inline-end: var(--space-2);
+}
+
+.demo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+}
+
+.hub-cta {
+  margin-top: var(--space-8);
+  padding: var(--space-5) var(--space-6);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.hub-cta p {
+  margin: var(--space-2) 0 0;
+}
+
+.cta-title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .demo-actions .button {
+    flex: 1 1 100%;
+  }
+}
