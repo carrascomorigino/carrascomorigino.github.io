@@ -1,7 +1,131 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mapagino demos</title>
-<style>body{font:16px/1.5 system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px}a{color:#7a1f3d}</style></head>
-<body><h1>Mapagino demos</h1>
-<ul><li><a href="./tramites-sunat/">Trámites SUNAT para independientes</a> — chat en español con fuentes oficiales.</li></ul>
-<p><a href="https://mapagino.com">mapagino.com</a></p></body></html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="theme-color" content="#f8f7db" />
+    <title>Demos de IA · Mapagino</title>
+    <meta
+      name="description"
+      content="Demos de IA de Mapagino: funciones que puedes probar gratis en tu navegador, con código abierto y pruebas."
+    />
+    <script src="shell/theme-init.js"></script>
+    <link rel="stylesheet" href="shell/shell.css" />
+    <link rel="stylesheet" href="hub.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="skip-link" href="#contenido">Ir al contenido</a>
+      <div class="site-header-inner">
+        <div class="site-brand">
+          <a href="https://mapagino.com" aria-label="Mapagino, ir a mapagino.com">
+            <img src="shell/logotipo.png" alt="Mapagino" class="site-logo" width="2301" height="705" />
+          </a>
+          <span class="site-tag">Demos</span>
+        </div>
+        <div class="header-actions">
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Cambiar tema (actual: sistema)"
+            data-label-system="Cambiar tema (actual: sistema)"
+            data-label-light="Cambiar tema (actual: claro)"
+            data-label-dark="Cambiar tema (actual: oscuro)"
+          >
+            <svg class="icon icon-system" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-6v2h3a1 1 0 1 1 0 2H7a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 2v11h16V5H4z" />
+            </svg>
+            <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.1 22c-5.6 0-10.1-4.5-10.1-10.1 0-4.6 3-8.5 7.3-9.7.4-.1.8.1 1 .4.2.4.2.8-.1 1.1-.9 1.2-1.4 2.7-1.4 4.2 0 3.9 3.2 7.1 7.1 7.1 1.5 0 3-.5 4.2-1.4.3-.2.8-.3 1.1-.1.4.2.5.6.4 1-1.1 4.4-5 7.5-9.5 7.5z" />
+            </svg>
+            <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-13a1 1 0 0 1-1-1V1.5a1 1 0 1 1 2 0V3a1 1 0 0 1-1 1zm0 19.5a1 1 0 0 1-1-1V21a1 1 0 1 1 2 0v1.5a1 1 0 0 1-1 1zM4.2 5.6 3.1 4.5a1 1 0 0 1 1.4-1.4l1.1 1.1a1 1 0 0 1-1.4 1.4zm15.3 15.3-1.1-1.1a1 1 0 0 1 1.4-1.4l1.1 1.1a1 1 0 0 1-1.4 1.4zM3 13H1.5a1 1 0 1 1 0-2H3a1 1 0 1 1 0 2zm19.5 0H21a1 1 0 1 1 0-2h1.5a1 1 0 1 1 0 2zM4.5 20.9a1 1 0 0 1-.7-1.7l1.1-1.1a1 1 0 0 1 1.4 1.4l-1.1 1.1a1 1 0 0 1-.7.3zM18.4 6a1 1 0 0 1-.7-1.7l1.1-1.1a1 1 0 0 1 1.4 1.4l-1.1 1.1a1 1 0 0 1-.7.3z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido" class="page">
+      <section class="hub-intro" aria-labelledby="hub-title">
+        <p class="eyebrow">Mapagino · Inteligencia artificial</p>
+        <h1 id="hub-title" class="display">Demos de IA</h1>
+        <p class="lead">
+          Funciones de IA que puedes probar ahora, gratis y sin registrarte. Cada demo tiene código
+          abierto y pruebas automáticas.
+        </p>
+      </section>
+
+      <section class="demo-list" aria-labelledby="list-title">
+        <h2 id="list-title" class="visually-hidden">Demos</h2>
+
+        <article class="card demo-card" aria-labelledby="demo-sunat">
+          <div class="demo-head">
+            <span class="tag tag-live">En vivo</span>
+            <span class="tag">Búsqueda en documentos (RAG)</span>
+          </div>
+          <h3 id="demo-sunat" class="headline">Trámites SUNAT para independientes</h3>
+          <p>
+            Un chat en español sobre trámites de SUNAT para quien empieza a trabajar como
+            independiente en Perú. Responde solo con páginas oficiales.
+          </p>
+          <h4 class="eyebrow">Qué demuestra</h4>
+          <ul class="proof-list">
+            <li>Cada respuesta muestra la fuente oficial y la cita exacta.</li>
+            <li>Si la respuesta no está en las fuentes, dice “No sé”.</li>
+            <li>La búsqueda y el “No sé” se prueban en cada cambio del código.</li>
+          </ul>
+          <ul class="stack" aria-label="Tecnología">
+            <li>React + TypeScript</li>
+            <li>Búsqueda en el navegador</li>
+            <li>Claude (opcional, con tu clave)</li>
+          </ul>
+          <div class="demo-actions">
+            <a class="button button-primary" href="./tramites-sunat/">Abrir la demo</a>
+            <a
+              class="button button-secondary"
+              href="https://github.com/carrascomorigino/tramites-sunat"
+              rel="noopener noreferrer"
+              >Ver el código</a
+            >
+          </div>
+        </article>
+      </section>
+
+      <section class="note hub-cta" aria-labelledby="cta-title">
+        <h2 id="cta-title" class="cta-title">¿Quieres una función así en tu producto?</h2>
+        <p>
+          Mapagino agrega funciones de IA a productos web y móviles, con pruebas y entrega completa
+          del código.
+        </p>
+        <!-- d4: this is the link that moves to https://mapagino.com/services when that page is live. -->
+        <p><a href="https://mapagino.com">mapagino.com</a></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-group">
+          <h2 class="footer-title">Mapagino</h2>
+          <ul>
+            <li><a href="https://mapagino.com">Inicio de mapagino.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h2 class="footer-title">Código abierto</h2>
+          <ul>
+            <li><a href="https://github.com/carrascomorigino" rel="noopener noreferrer">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2025–2026 Mapagino. Las demos son solo demostraciones.</p>
+    </footer>
+
+    <script src="shell/theme.js" defer></script>
+  </body>
+</html>
